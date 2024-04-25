@@ -9,7 +9,8 @@ var Complemento = 0;
 context(`${++Context} - Teste de API - Unitário - Portal da Transparência Gov.Br`, () =>
 {
     describe('Consulta às licitações na API do Portal da Transparência - Teste Unitário', () => {
-        it('Simula a consulta às licitações com os parâmetros fornecidos', () => {
+        it('Simula a consulta às licitações com os parâmetros fornecidos', () =>
+        {
             const codigoOrgao = '52111';
             const dataAberturaInicial = '01/01/2022';
             const dataAberturaFinal = '30/06/2022';
@@ -21,7 +22,8 @@ context(`${++Context} - Teste de API - Unitário - Portal da Transparência Gov.
                 method: 'GET',
                 url: apiUrl,
                 failOnStatusCode: false
-            }).then((response) => {
+            }).then((response) =>
+            {
                 expect(response.status).to.equal(200);
                 expect(response.body).to.be.an('array');
                 expect(response.body.length).to.be.greaterThan(0);

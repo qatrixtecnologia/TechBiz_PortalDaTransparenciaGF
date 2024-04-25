@@ -15,7 +15,8 @@ context(`${++Context} - Teste de API - BackEnd - Portal da Transparência Gov.Br
         const dataAberturaFinal = '30/06/2022';
         const url = `https://api.portaldatransparencia.gov.br/api-de-dados/licitacoes/v3/licitacoes?` + `codigoOrgao=${codigoOrgao}&dataAberturaInicial=${dataAberturaInicial}&dataAberturaFinal=${dataAberturaFinal}`;
 
-        it(`Teste ${++Test}.${++Complemento} - Consultas de Licitações - Status 200`, () => {
+        it(`Teste ${++Test}.${++Complemento} - Consultas de Licitações - Status 200`, () =>
+        {
             cy.request({
                 method: 'GET',
                 url: url,
