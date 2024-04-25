@@ -21,6 +21,7 @@ module.exports = defineConfig({
     experimentalRunAllSpecs: true,
     hideXHRInCommandLog: true,
     specPattern: [
+      "cypress/e2e/00 - Teste Unitario - API.cy.js",
        "cypress/e2e/01 - Validacoes da API - Licitacoes Gov.cy.js"
     ],
     setupNodeEvents(on, config) {
